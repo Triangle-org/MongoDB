@@ -1,0 +1,40 @@
+{
+  "name": "triangle/mongo",
+  "description": "Triangle MongoDB Plugin",
+  "type": "library",
+  "keywords": [
+    "localzet",
+    "Triangle",
+    "mongodb"
+  ],
+  "license": "AGPL-3.0-or-later",
+  "authors": [
+    {
+      "role": "Developer",
+      "name": "Ivan Zorin",
+      "email": "creator@localzet.com",
+      "homepage": "https://github.com/localzet"
+    }
+  ],
+  "support": {
+    "email": "support@localzet.com",
+    "source": "https://github.com/Triangle-org/MongoDB"
+  },
+  "autoload": {
+    "psr-4": {
+      "Triangle\\MongoDB\\": "src"
+    }
+  },
+  "require": {
+    "php": "^8.2",
+    "illuminate/support": "^8.0",
+    "illuminate/container": "^8.0",
+    "illuminate/database": "^8.0",
+    "illuminate/events": "^8.0",
+    "mongodb/mongodb": "^1.6",
+    "ext-mongodb": "*"
+  },
+  "require-dev": {
+    "triangle/engine": ">=3.4"
+  }
+}

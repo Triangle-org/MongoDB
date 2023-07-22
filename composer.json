@@ -1,5 +1,5 @@
 {
-  "name": "triangle/mongo",
+  "name": "triangle/mongodb",
   "description": "Triangle MongoDB Plugin",
   "type": "library",
   "keywords": [

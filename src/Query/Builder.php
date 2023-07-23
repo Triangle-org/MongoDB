@@ -508,6 +508,24 @@ class Builder extends BaseBuilder
     }
 
     /**
+     * Convert a key to ObjectID if needed.
+     * @param mixed $id
+     * @return mixed
+     */
+    public function convertKey($id)
+    {
+        if (is_string($id) && strlen($id) === 24 && ctype_xdigit($id)) {
+            return new ObjectID($id);
+        }
+
+        if (is_string($id) && strlen($id) === 16 && preg_match('~[^\x20-\x7E\t\r\n]~', $id) > 0) {
+            return new Binary($id, Binary::TYPE_UUID);
+        }
+
+        return $id;
+    }
+
+    /**
      * @inheritdoc
      */
     public function aggregate($function, $columns = [])
@@ -578,24 +596,6 @@ class Builder extends BaseBuilder
         }
 
         return call_user_func_array(parent::class . '::where', $params);
-    }
-
-    /**
-     * Convert a key to ObjectID if needed.
-     * @param mixed $id
-     * @return mixed
-     */
-    public function convertKey($id)
-    {
-        if (is_string($id) && strlen($id) === 24 && ctype_xdigit($id)) {
-            return new ObjectID($id);
-        }
-
-        if (is_string($id) && strlen($id) === 16 && preg_match('~[^\x20-\x7E\t\r\n]~', $id) > 0) {
-            return new Binary($id, Binary::TYPE_UUID);
-        }
-
-        return $id;
     }
 
     /**

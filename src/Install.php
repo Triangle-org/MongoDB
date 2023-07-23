@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * @package     Triangle MongoDB Plugin
  * @link        https://github.com/Triangle-org/MongoDB

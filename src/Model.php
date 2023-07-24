@@ -288,7 +288,7 @@ abstract class Model extends BaseModel
      * The collection associated with the model.
      * @var string
      */
-    protected string $collection;
+    protected $collection;
 
     /**
      * The primary key for the model.

@@ -121,7 +121,7 @@ class Builder extends BaseBuilder
      * The database collection.
      * @var \MongoDB\Collection
      */
-    protected \MongoDB\Collection $collection;
+    protected $collection;
     /**
      * Operator conversion.
      * @var array

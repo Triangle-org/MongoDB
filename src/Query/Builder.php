@@ -48,19 +48,19 @@ class Builder extends BaseBuilder
 {
     /**
      * The column projections.
-     * @var array
+     * @var array|null
      */
-    public array $projections;
+    public ?array $projections = null;
     /**
      * The cursor timeout value.
-     * @var int
+     * @var int|null
      */
-    public int $timeout;
+    public ?int $timeout = null;
     /**
      * The cursor hint value.
-     * @var int
+     * @var int|null
      */
-    public int $hint;
+    public ?int $hint = null;
     /**
      * Custom options to add to the query.
      * @var array

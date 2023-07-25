@@ -1,11 +1,11 @@
 {
   "name": "triangle/mongodb",
-  "description": "Triangle MongoDB Plugin",
+  "description": "Triangle MongoDB Component",
   "type": "library",
   "keywords": [
     "localzet",
     "Triangle",
-    "mongodb"
+    "MongoDB"
   ],
   "license": "AGPL-3.0-or-later",
   "authors": [

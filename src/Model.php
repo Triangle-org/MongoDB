@@ -715,11 +715,11 @@ abstract class Model extends BaseModel
 
     /**
      * Get the parent relation.
-     * @return Relation
+     * @return Relation|null
      */
-    public function getParentRelation(): Relation
+    public function getParentRelation(): ?Relation
     {
-        return $this->parentRelation;
+        return $this->parentRelation ?? null;
     }
 
     /**

@@ -7,7 +7,7 @@ declare(strict_types=1);
  * @link        https://github.com/Triangle-org/MongoDB
  *
  * @author      Ivan Zorin <creator@localzet.com>
- * @copyright   Copyright (c) 2018-2023 Localzet Group
+ * @copyright   Copyright (c) 2018-2024 Localzet Group
  * @license     GNU Affero General Public License, version 3
  *
  *              This program is free software: you can redistribute it and/or modify
@@ -156,7 +156,7 @@ trait HybridRelations
         // the calling method's name and use that as the relationship name as most
         // of the time this will be what we desire to use for the relationships.
         if ($relation === null) {
-            [$current, $caller] = debug_backtrace(false, 2);
+            [$current, $caller] = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 2);
 
             $relation = $caller['function'];
         }
